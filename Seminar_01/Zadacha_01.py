@@ -14,4 +14,4 @@ if (num < 1 or num > 7):
 elif (num >= 1 and num <= 5):
     print("Нет, это рабочий день")
 else:
-    print( "Да, выходной день")
+    print( "Да, это выходной день")
