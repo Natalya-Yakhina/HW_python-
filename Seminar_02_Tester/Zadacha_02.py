@@ -6,7 +6,7 @@
 N = int(input("Введите число N = "))
 result = 1
 result_list = []
-for i in range(1, N + 1):
+for i in range(1, N + 1): # range - возвращает объект, который производит последовательность целых чисел от начала до остановки пошагово.
     result *= i
-    result_list.append(result)
+    result_list.append(result) # append - добавляет объект в конец списка
 print(result_list)
