@@ -8,12 +8,12 @@
 n = input("Введите число N = ")
 sum = 0
 for digit in n:
-    if digit.isdigit():
+    if digit.isdigit(): # isdigit - возвращает True, если строка является строкой цифр
         sum += int(digit)
 print(f"Сумма цифр введенного числа {n} = {sum}")
 
 
-#  ====== для натуральных чисел ==========
+#  ====== только для натуральных чисел ==========
 # n = float(input("Введите число N: "))
 # sum = 0
 # while n > 0:
