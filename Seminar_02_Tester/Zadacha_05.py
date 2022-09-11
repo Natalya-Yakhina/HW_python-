@@ -1,7 +1,6 @@
 # 5. Реализуйте алгоритм перемешивания списка.
 
 import random
-
 n = int(input("Введите размер списка: "))
 a = []
 for i in range(n):
@@ -14,5 +13,5 @@ print(f"Перемешанный список: {a}")
 
 # import random # генерация случайных чисел
 # list = [1, 2, 3, 4, 5]
-# result = random.sample(list, len(list)) # sample - возвращает новый список, содержащий элементы из совокупности, оставляя исходную совокупность без изменений. 
-# print ("\n", str(list), "-->", str(result))
+# result = random.shuffle(list)
+# print (list)
