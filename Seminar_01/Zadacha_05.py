@@ -15,4 +15,4 @@ yB = float(input("Значение Y: "))
 
 from math import sqrt
 AB = round(sqrt((xA - xB)**2 + (yA - yB)**2), 2)
-print("Расстояние между двумя точками А и В =", AB)
+print("Расстояние между двумя точками А и В =", round(AB -0.005, 2))
