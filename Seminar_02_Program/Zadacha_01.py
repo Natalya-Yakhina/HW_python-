@@ -11,3 +11,15 @@ for digit in n:
     if digit.isdigit(): # isdigit - возвращает True, если строка является строкой цифр
         sum += int(digit)
 print(f"Сумма цифр введенного числа {n} = {sum}")
+
+
+# var = input("Введите число ")
+# sum = 0
+# var1 = None
+# for i in var:
+#     try:
+#         var1 = int(i)
+#     except:
+#         continue
+#     sum = sum + var1
+# print("Sum=", sum)
