@@ -1,26 +1,25 @@
-# 3. Напишите программу, которая будет преобразовывать десятичное число в двоичное.
+# 3. Задайте список из вещественных чисел. 
+# Напишите программу, которая найдёт разницу между максимальным и минимальным значением дробной части элементов.
 
 # Пример:
-# - 45 -> 101101
-# - 3 -> 11
-# - 2 -> 10
+# - [1.1, 1.2, 3.1, 5, 10.01] => 0.19
 
-n = int(input('Введите число для преобразования в двоичное: '))
-result = ''
+list = [1.1, 1.2, 3.1, 5, 10.01]
 
-while n > 0:
-    result = str(n % 2) + result
-    n = n // 2
+def dif_max_min (list):
+    new_list = []
+    for i in range(len(list)):
+        if type(list[i]) is float:
+            list[i] = round(float(list[i]) - int(list[i]), 3)
+            new_list.append(list[i])
 
-print(result)
+    new_list.sort()
+    if len(new_list) == 0:
+        return 0
+    elif len(new_list) == 1:
+        return new_list[0]
+    else:
+        result = new_list[-1] - new_list[0]
+    return result
 
-
-# ==================== через функцию bin ========================
-
-# from unittest import result
-
-# n = int(input('Введите число для преобразования в двоичное: '))
-# print(f'Двоичное число через функцию bin = {bin(n)}')
-
-# result = str(bin(n)).replace("0b", "")
-# print('\n', n, '->', result, '\n')
+print(list, ' => ', dif_max_min(list))
