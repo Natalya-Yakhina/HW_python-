@@ -2,16 +2,26 @@
 # Найдите произведение элементов на указанных позициях. 
 # Позиции хранятся в файле file.txt в одной строке одно число.
 
-a = int(input("Введите число: "))
-n = -a 
-f = []
-for i in range(a*2 + 1):
-    f.append(int(n))
-    n = n+1
-print(f)
+from random import randint
+n = int(input('Введите число N - '))
+numbers = []
+for i in range(n):
+    numbers.append(randint(-n, n+1))
+print(numbers)
 
-proiz = 1
-with open ("file.txt") as file:
+f = open('file.txt', 'w')
+while True:
+    s = input('Укажите позицию для вычисления - ')
+    if s == "":
+        break
+f.write(s+"\n")
+f.close()
 
-    ## и что дальше непонятно
-print(proiz)
+result = 1
+f = open('file.txt', 'r')
+for line in f:
+    if line == "":
+        break
+result *= numbers[int(line)]
+f.close()
+print(result)
