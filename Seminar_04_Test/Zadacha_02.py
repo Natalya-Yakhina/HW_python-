@@ -16,4 +16,6 @@ def Factorization(n): # функция факторизации переборо
         divisor.append(n)
         return divisor
 
-print('\n', n, '->', Factorization(n), '\n')
+print(f'Простые множители числа {n} -> {Factorization(n)}')
+
+# print(Простые множители числа {N}: {prime_factors}')
