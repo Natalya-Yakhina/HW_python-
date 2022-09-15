@@ -22,5 +22,3 @@
 # p2 = polynom()
 # print(p1)
 # print(p2)
-
-def koeff(str):
