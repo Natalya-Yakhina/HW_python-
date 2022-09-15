@@ -17,5 +17,3 @@ def Factorization(n): # функция факторизации переборо
         return divisor
 
 print(f'Простые множители числа {n} -> {Factorization(n)}')
-
-# print(Простые множители числа {N}: {prime_factors}')
