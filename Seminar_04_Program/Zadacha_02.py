@@ -16,3 +16,20 @@ for num in num_list:
     if num not in list_new:
         list_new.append(num)
 print(f'Уникальные элементы в списке {num_list} -> {list_new}')
+
+
+# num_list = [1, 2, 3, 5, 1, 5, 3, 10]
+
+# def Sort(num_list):
+#     list_new = []
+#     num = num_list[0]
+#     list_new.append(num)
+#     for i in num_list:
+#         if i == num:
+#             continue
+#         else:
+#             num = i
+#             list_new.append(i)
+#     return list_new
+
+# print(Sort(num_list))
