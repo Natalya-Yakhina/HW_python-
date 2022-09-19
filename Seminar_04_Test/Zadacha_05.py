@@ -1,24 +1,31 @@
 # 5. Даны два файла, в каждом из которых находится запись многочлена. 
 # Задача - сформировать файл, содержащий сумму многочленов.
 
+# попытка разобрать увиденное на семинаре(
 
-# def polynom():
-#     import random
-#     k = [random.randint(1, 100) for i in range(random.randint(2, 10))]
-#     print('Натуральная степень: n =', len(k)-1) 
-#     m = ''
-#     for i in range(0, len(k)):
-#         m = m + str(k[i]) 
-#         if i < len(k) - 1:
-#             m += 'х'
-#         if i < len(k)- 2:
-#             m += '^'+ str(len(k) - i - 1)
-#         if i < len(k) - 1:
-#             m += ' + '
-#     m += ' = 0'
-#     return (m)
-    
-# p1 = polynom()
-# p2 = polynom()
-# print(p1)
-# print(p2)
+# def SumPolinom(polynom1, polynom2):
+#     for i in range(len(polynom1)):
+#         for j in polynom2:
+#             if polynom1[i][1] == [j][1]:
+#                 polynom1[i] = ((polynom1[i][0] + polynom2[j][0], polynom1[i][1]))
+#                 polynom2.remove(j)
+#     sum = polynom1 + polynom2
+#     for i in sum:
+#         if i[0] == 0:
+#             sum.remove(i)
+#         sum = sorted(sum, key=lambda num: num[1]) # Вернуть новый список, содержащий все элементы из итерации в порядке возрастания.
+#         sum.reverse()
+#         return sum
+
+# file1 = open('polynom1.txt', 'r')
+# f1 = file1.readline()
+# file2 = open('polynom2.txt', 'r')
+# f2 = file2.readline()
+# res = open('sumpolynom.txt', 'w')
+
+# result = SumPolinom(f1, f2)
+# print(f'Сумма многочленов: {result}')
+# res.write(str(result))
+# file1.close()
+# file2.close()
+# res.close()
