@@ -45,36 +45,44 @@ def chru(chifr, n, l, fraza):
                     if moch == 26:
                         if fraza[i] == eng_lower_alphabet[j]:
                            print(eng_lower_alphabet[(j + n) % moch], end = '')
-                           break
+            #                break
         else:
             print(fraza[i], end='')
 
 chru(chif, n, language, f)
 
-
-
 #=======================================================================================
-# alfavit_EU =  'ABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZ'
-# alfavit_RU = 'АБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯАБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ'
+#==========================только строчные=============================================
+
+
+# eng_alphabet = 'abcdefghijklmnopqrstuvwxyz'
+# rus_alphabet = "абвгдежзийклмнопрстуфхцчшщъыьэюя"
+
+# language = input('Выберите язык - aнгл = e, рус = r : ')
+# chif = input('Выберите шифрование: шифрование - ch, дешифрование - def: ')
 # sdvig = 1
-# message = input("Сообщение для ДЕшифровки: ").upper()
-# itog = ''
-# languageg = input('Выберите язык RU/EU: ')
-# if languageg == 'RU':
-#     for i in message:
-#         mesto = alfavit_RU.find(i)
-#         new_mesto = mesto + sdvig
-#         if i in alfavit_RU:
-#             itog += alfavit_RU[new_mesto]
+# f = input('Введите фразу: ')
+
+# def chru(chifr, n, l, fraza):
+#     if l == 'r': # если русский
+#         moch = 32 # размер русского алфавита
+#     if l == 'e': # если английский
+#         moch = 26 # размер английского алфавита
+#     if chifr== 'def': # если дешифровка
+#         sdvig = -sdvig
+#     for i in range(len(fraza)):
+#         if fraza[i].isalpha():
+#             if fraza[i] == fraza[i].upper(): # upper - dозвращает копию исходной строки с символами приведёнными к верхнему регистру
+#                 for j in range (moch):
+#                     if moch == 32:
+#                         if fraza[i] == rus_alphabet[j]:
+#                             print(rus_alphabet[(j + n) % moch], end = '')
+#                             break
+#                     if moch == 26:
+#                         if fraza[i] == eng_alphabet[j]:
+#                             print(eng_alphabet[(j + n) % moch], end = '')
+#                             break
 #         else:
-#             itog += i
-# else:
-#     for i in message:
-#         mesto = alfavit_EU.find(i)
-#         new_mesto = mesto + sdvig
-#         if i in alfavit_EU:
-#             itog += alfavit_EU[new_mesto]
-#         else:
-#             itog += i
-# print (itog)
-#=======================================================================================
+#             print(fraza[i], end = ' ')
+
+# chru(chif, language, f)
