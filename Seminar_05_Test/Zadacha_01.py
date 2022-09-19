@@ -1,22 +1,17 @@
 # Напишите программу, удаляющую из текста все слова, содержащие "абв".
 
+text = 'Напишите абв програбву программу удаляющуабв удаляющую из текста все слова словабв, содержащие абв'
 
-# text=list(map(str,input('Введите текст: ').split()))
-# text=' '.join(text)
-# print(text)
+def delete(text):
+    text = list(filter(lambda x: 'абв' not in x, text.split()))
+    return ' '.join(text)
 
-# def delete_words(text):
-#     text = list(filter(lambda x: 'абв' not in x, text.split()))
-#     return " ".join(text)
+text = delete(text)
+print(text)
 
+# ===================================================================================
 
-# text = delete_words(text)
-# print(text)
-
-
-# Напишите программу, удаляющую из текста все слова, содержащие "абв"
-
-newTxt = 'забвение бывает временным когда абв это называется самозабвением'.split()
-my_str = 'абв'
-result = list(filter(lambda x: not my_str in x, newTxt))
-print(result)
+# newTxt = 'Напишите абв програбву программу удаляющуабв удаляющую из текста все слова словабв, содержащие абв'.split()
+# my_str = 'абв'
+# result = list(filter(lambda x: not my_str in x, newTxt))
+# print(result)
