@@ -17,9 +17,9 @@ print(text)
 # ===================================================================================
 # with open("words.txt", "r") as fin:
 #     for line in fin:
-#         words = line.split()
-#     for word in words:
+#         words = line.split() # строчку разбиваем на слова и выделяем пробелами
+#     for word in words: # проверяем каждое слово
 #         if "абв" in word:
 #             words.remove(word)
-# sentence = " ".join(words)
+# sentence = " ".join(words) # соединяем в одну строчку все слова и печатаем
 # print(sentence)
