@@ -14,9 +14,27 @@
 
 
 
-# lang = ['java', 'python', 'c#', 'c', 'c++', 'javascript', 'typescript', 'php']
-# nums = [i for i in range(1, len(lang)+1)]
-# ln = list(zip(nums,lang))
+list_lang = ['java', 'python', 'c#', 'c', 'c++', 'java', 'php']
+list_num = [i for i in range(1, len(list_lang) + 1)]
+
+# # =========== функция создания списка кортежей, состоящих из номера и языка, написанного большими буквами =============
+
+def list_tuple(list_lang, list_num):
+    ln = list(zip(list_num, list_lang)) # zip выдает кортежи n-длины, где n — количество итераций, переданных в качестве позиционных аргументов в zip()
+    for i in range(len(ln)):
+        ln[i] = list(ln[i])
+        ln[i][1] = str(ln[i][1]).upper() # upper - dозвращает копию строки, преобразованную в верхний регистр
+        ln[i] = tuple(ln[i])
+    print(ln)
+
+list_tuple(list_lang, list_num)
+
+# ========================
+
+# lang = ['java', 'python', 'c#', 'c', 'c++', 'java', 'php']
+# nums = [i for i in range(1, len(lang) + 1)]
+
+# ln = list(zip(nums, lang))
 # for i in range(len(ln)):
 #     ln[i] = list(ln[i])
 #     ln[i][1] = str(ln[i][1]).upper()
@@ -24,11 +42,11 @@
 # print(ln)
 # for i in range(len(ln)):
 #     ln[i] = list(ln[i])
-# sums = []
+#     sums = []
 # for i in range(len(ln)):
 #     sum = 0
-#     for j in ln[i][1]:
-#         sum += ord(j)
+# for j in ln[i][1]:
+#     sum += ord(j)
 #     sums.append(sum)
 # print(sums)
 # ln_new = []
