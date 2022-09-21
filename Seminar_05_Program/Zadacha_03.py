@@ -13,35 +13,31 @@
 # https://dzen.ru/media/simplichka/kak-tekst-hranitsia-v-kompiutere-chast-3-62d3d91515d67a522f78e1e6?&
 
 
-from unittest import result
-
-
-list_lang = ['java', 'python', 'c#', 'c', 'c++', 'java', 'php']
-list_num = [i for i in range(1, len(list_lang) + 1)]
+list_languages = ['java', 'python', 'c#', 'c', 'c++', 'java', 'php'] # список с языками
+list_len_lang = [i for i in range(1, len(list_languages) + 1)] # список с числами от 1 до длины list_languages
 
 # =========== функция создания списка кортежей, состоящих из номера и языка, написанного большими буквами =============
 
 def get_list_tuple(list_1, list_2):
 
-    list_2_ch = [i.upper for i in list_2]  # upper - dозвращает копию строки, преобразованную в верхний регистр
+    list_2_ch = [i.upper() for i in list_2]  # upper - dозвращает копию строки, преобразованную в верхний регистр
     result = list(zip(list_1, list_2_ch)) # zip выдает кортежи n-длины, где n — количество итераций, переданных в качестве позиционных аргументов в zip()
     return result
 
 def filter(list_tuple):
 
-    new_list_list_num = []
-    new_list_list_lange = []
+    new_list_len_lang = []
+    new_list_languages = []
     for i in list_tuple:
         order, languages = 1
         sum_bal = 0
         for j in languages:
             sum_bal += ord(j) # определяющая порядок
         if not sum_bal % order:
-            new_list_list_num.append(sum_bal)
-            new_list_list_lange.append(languages)
-    new_list_tuple = list(new_list_list_lange, new_list_list_num)
+            new_list_len_lang.append(sum_bal)
+            new_list_languages.append(languages)
+    new_list_tuple = list(zip(new_list_len_lang, new_list_languages))
     return new_list_tuple
 
-list_tuple = get_list_tuple(list_lang, list_num)
+list_tuple = get_list_tuple(list_len_lang, list_languages)
 print(list_tuple)
-
