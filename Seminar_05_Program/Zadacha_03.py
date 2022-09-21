@@ -13,44 +13,35 @@
 # https://dzen.ru/media/simplichka/kak-tekst-hranitsia-v-kompiutere-chast-3-62d3d91515d67a522f78e1e6?&
 
 
+from unittest import result
+
 
 list_lang = ['java', 'python', 'c#', 'c', 'c++', 'java', 'php']
 list_num = [i for i in range(1, len(list_lang) + 1)]
 
-# # =========== функция создания списка кортежей, состоящих из номера и языка, написанного большими буквами =============
+# =========== функция создания списка кортежей, состоящих из номера и языка, написанного большими буквами =============
 
-def list_tuple(list_lang, list_num):
-    ln = list(zip(list_num, list_lang)) # zip выдает кортежи n-длины, где n — количество итераций, переданных в качестве позиционных аргументов в zip()
-    for i in range(len(ln)):
-        ln[i] = list(ln[i])
-        ln[i][1] = str(ln[i][1]).upper() # upper - dозвращает копию строки, преобразованную в верхний регистр
-        ln[i] = tuple(ln[i])
-    print(ln)
+def get_list_tuple(list_1, list_2):
 
-list_tuple(list_lang, list_num)
+    list_2_ch = [i.upper for i in list_2]  # upper - dозвращает копию строки, преобразованную в верхний регистр
+    result = list(zip(list_1, list_2_ch)) # zip выдает кортежи n-длины, где n — количество итераций, переданных в качестве позиционных аргументов в zip()
+    return result
 
-# ========================
+def filter(list_tuple):
 
-# lang = ['java', 'python', 'c#', 'c', 'c++', 'java', 'php']
-# nums = [i for i in range(1, len(lang) + 1)]
+    new_list_list_num = []
+    new_list_list_lange = []
+    for i in list_tuple:
+        order, languages = 1
+        sum_bal = 0
+        for j in languages:
+            sum_bal += ord(j) # определяющая порядок
+        if not sum_bal % order:
+            new_list_list_num.append(sum_bal)
+            new_list_list_lange.append(languages)
+    new_list_tuple = list(new_list_list_lange, new_list_list_num)
+    return new_list_tuple
 
-# ln = list(zip(nums, lang))
-# for i in range(len(ln)):
-#     ln[i] = list(ln[i])
-#     ln[i][1] = str(ln[i][1]).upper()
-#     ln[i] = tuple(ln[i])
-# print(ln)
-# for i in range(len(ln)):
-#     ln[i] = list(ln[i])
-#     sums = []
-# for i in range(len(ln)):
-#     sum = 0
-# for j in ln[i][1]:
-#     sum += ord(j)
-#     sums.append(sum)
-# print(sums)
-# ln_new = []
-# for i in range(len(ln)):
-#     if sums[i] % ln[i][0] == 0:
-#         ln_new.append((sums[i], ln[i][1]))
-# print(ln_new)
+list_tuple = get_list_tuple(list_lang, list_num)
+print(list_tuple)
+
