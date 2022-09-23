@@ -57,13 +57,29 @@
 # Пример:
 # [2, 3, 5, 9, 3] -> на нечётных позициях элементы 3 и 9, ответ: 12
 
-from unittest import result
+# from unittest import result
 
-spisok = [2, 3, 5, 9, 3]
+# spisok = [2, 3, 5, 9, 3]
 
-# result = list(filter(lambda x: x % 2, spisok)) # нечетные элементы
+# # result = list(filter(lambda x: x % 2, spisok)) # нечетные элементы
 
-num_poz = [i for i in range(1, len(spisok)) if not i % 2 == 0] # нечетные значения из списка
-num_poz = [v for k,v in enumerate(spisok) if not k % 2 == 0] # четные значения ключей из массива
-# lst = list(enumerate(spisok)) # чтобы понимать как это работает [(0, 2), (1, 3), (2, 5), (3, 9), (4, 3)]
-print('\n', spisok, '-> на нечётных позициях элементы ', num_poz, ', сумма которых =', sum(num_poz))
+# num_poz = [i for i in range(1, len(spisok)) if not i % 2 == 0] # нечетные значения из списка
+# num_poz = [v for k,v in enumerate(spisok) if not k % 2 == 0] # четные значения ключей из массива
+# # lst = list(enumerate(spisok)) # чтобы понимать как это работает [(0, 2), (1, 3), (2, 5), (3, 9), (4, 3)]
+# print('\n', spisok, '-> на нечётных позициях элементы ', num_poz, ', сумма которых =', sum(num_poz))
+
+# ==============================================  6.  ========================================================
+
+# 6 - Найти расстояние между двумя точками пространства(числа вводятся через пробел)
+
+# Пример:
+# - A (3,6); B (2,1) -> 5,09
+# - A (7,-5); B (1,-1) -> 7,21
+
+from math import sqrt
+
+xA,yA = map(int,(input("Введите координаты X и Y точки A через пробел: ").split()))
+xB,yB = map(int,(input("Введите координаты X и Y точки В через пробел: ").split()))
+
+AB = round(sqrt((xA - xB)**2 + (yA - yB)**2), 2)
+print('Расстояние между двумя точками А и В =', round(AB -0.005, 2))
