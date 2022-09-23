@@ -45,6 +45,7 @@ while len(list_operator)!=0:
 
 print(list_dig)
 print(list_operator)
+
 # for i in range(len(list_operator)):
 #     temp_res = (dict_op[list_operator[0]])(list_dig[0],list_dig[1])
 #     list_operator.pop(0)
