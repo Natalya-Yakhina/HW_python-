@@ -2,6 +2,7 @@
 
 
 # spisok = [2, 3, 4, 5, 6]
+
 spisok = list(map(int, input('Введите числа списка через пробел: ').split()))
 
 def pairs_num(spisok):
