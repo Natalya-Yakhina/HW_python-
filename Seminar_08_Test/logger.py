@@ -1,3 +1,4 @@
+#  что выполняет программа
 from datetime import datetime
 
 def log_to_file(entry):  
